@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&display=swap&family=Carter+One&display=swap&family=Creepster&display=swap&family=Chakra+Petch:wght@300&family=Chivo:wght@300&family=Jost:wght@300&family=Overpass:wght@300&display=swap');
+.nav-container {
+    background-color: #FF4F61;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-family: 'Carter One', cursive;
+
+}
+
+ul{
+    display: flex;    
+    list-style: none;    
+}
+
+li{
+    margin: 5px;
+
+}
+
+li > a{
+    text-decoration: none;
+    color: white;
+}
