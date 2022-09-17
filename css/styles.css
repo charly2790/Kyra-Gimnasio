@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&display=swap&family=Carter+One&display=swap&family=Creepster&display=swap&family=Chakra+Petch:wght@300&family=Chivo:wght@300&family=Jost:wght@300&family=Overpass:wght@300&display=swap');
-.nav-container {
-    background-color: #FF4F61;
-    display: flex;
-    justify-content: flex-end;
-    text-transform: uppercase;
-    font-family: 'Carter One', cursive;
+/*--------------------------------------------------------------------------------*/
+/*                            Configuraciones Generales                           */
+/*--------------------------------------------------------------------------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&display=swap&family=Carter+One&display=swap&family=Creepster&display=swap&family=Chakra+Petch:wght@300&family=Chivo:wght@300&family=Jost:wght@300&family=Overpass:wght@300&display=swap');
+
+*{
+    margin: 0px;
 }
 
 ul{
@@ -21,4 +21,74 @@ li{
 li > a{
     text-decoration: none;
     color: white;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*                            Etiquetas Semánticas                                */
+/*--------------------------------------------------------------------------------*/
+
+.nav-container {
+    background-color: #FF4F61;
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    font-family: 'Carter One', cursive;
+
+}
+
+.header{
+    border: 2px dotted black;
+}
+
+.footer{
+    background-color: #1E2425;
+    color: white;
+}
+
+.main-content{
+    /*Contenido principal de la página*/
+    background-color: #511D47;
+}
+
+.top-section{
+    background-color:#FFCB3A;
+}
+
+.right-side{
+    background-color: #343B3C;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*                            Sección Configuración Grid                          */
+/*--------------------------------------------------------------------------------*/
+
+.grid-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 10% 20% 50% 20% / 20% 60% 20%;
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+}
+
+.grid-header{ grid-area: header; }
+
+.grid-footer{ grid-area: footer; }
+
+.grid-main-content{ grid-area: main-content; }
+
+.grid-top-section{ grid-area: top-section; }
+
+.grid-right-side{ grid-area: right-side; }
+
+/*--------------------------------------------------------------------------------*/
+/*                            Sección mediaqueries                                */
+/*--------------------------------------------------------------------------------*/
+
+
+@media only screen and (max-width: 800px){
+    
+    .grid-container{        
+        grid-template: 10% 15% 1fr 15% 20% / 100%;
+        grid-template-areas: "header" "top-section" "main-content" "right-side" "footer";
+    }
 }
