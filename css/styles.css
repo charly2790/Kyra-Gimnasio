@@ -79,6 +79,53 @@ li> div > a {
     font-family: 'Josefin Sans';
 }
 
+.footer-parent{
+    border: 2px dashed black;
+    height: 40vh;    
+}
+
+.footer-child{
+    width: 16.7vw;
+}
+
+.footer-flex-row{    
+    display: flex;
+    flex-direction: row;
+    column-gap: 25px;    
+    justify-content: center;
+}
+
+.footer-flex-column{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;        
+}
+
+#footer-social-nw-container{
+    align-items: stretch;
+}
+
+#footer-main-child{
+    row-gap: 15px;
+}
+
+#footer-second-child{
+    align-items: baseline;
+}
+
+.footer-ul{
+    /*Estilo de la viñeta*/
+    list-style-type: none;    
+}
+
+.footer-ul li{
+    margin: 10px 0px 0px 10px;
+
+}
+
+
+
 /*--------------------------------------------------------------------------------*/
 /*                            Sección Configuración Grid                          */
 /*--------------------------------------------------------------------------------*/
