@@ -80,8 +80,7 @@ li> div > a {
 }
 
 .footer-parent{
-    border: 2px dashed black;
-    height: 40vh;    
+    border: 2px dashed black;   
 }
 
 .footer-child{
@@ -134,7 +133,7 @@ li> div > a {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 10% 20% 50% 20% / 20% 60% 20%;
+    grid-template: 10% 20% 50% 20% / 20% 55% 25%;
     grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
 }
 
