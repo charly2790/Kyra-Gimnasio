@@ -8,18 +8,6 @@
     margin: 0px;
 }
 
-ul{
-    display: flex;    
-    list-style: none;    
-}
-
-li{
-    margin: 5px;
-}
-li> div > a {
-    text-decoration: none;
-}
-
 /*--------------------------------------------------------------------------------*/
 /*                            Etiquetas Semánticas                                */
 /*--------------------------------------------------------------------------------*/
@@ -30,30 +18,51 @@ li> div > a {
     font-family: 'Carter One', cursive;
     position: absolute;
     bottom: 15%;
-    right: 2%;
-}
+    right: 2%;}
 
 .header{
     background-color: rgb(255,79,97);
     background: linear-gradient(180deg, rgba(255,79,97,1) 0%, rgba(255,79,97,0.84) 65%, rgba(255,203,58,1) 100%);
     position: relative;
-    font-size: 1.3em;
+   
 }
+
+.header-ul{
+    display: flex;    
+    list-style: none;    
+}
+
+
 
 .header-shadow{
     text-shadow: rgba(255,03, 58, 0.7) 0.2em 0.2em;
     box-sizing: border-box;
+    margin: 5px;
 }
 
 .hearder-menu-option{ color: black; }
 
 .hearder-menu-option:hover{ color:white; }
 
+.hearder-menu{
+    font-size: 1.4em;
+}
+.hearder-menu >a{
+    text-decoration: none;  
+}
 .hearder-menu:hover{
-    
     transform:  translateY(-5px)
                 scale(1.2, 1.2)
                 rotate(-10deg);
+}
+
+.header-title{
+    margin-top: -25px;
+    font-family: 'Carter One';
+    font-size: 4.1em;
+    text-align: center;
+    padding: 0%;
+    color: rgb(255, 255, 226);
 }
 
 .top-section{
