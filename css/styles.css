@@ -361,7 +361,7 @@
 }
 
 .image-teacher p{
-    font-size: 1.5em;
+    font-size: 2em;
     font-style: italic;
     font-weight: bold;
     text-align: center;
@@ -370,9 +370,9 @@
 
 .image-teacher img{
     object-fit:cover;
-    width: 95%;
-    height: 95%;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
     min-width: 320px;
 }
 
@@ -400,7 +400,7 @@
     width: 560px;
     height: 315px;
     margin-top: 2%;
-    margin-right: 3%;
+    margin-right: 10px;
 }
 
 .activity-section-description li{
@@ -430,6 +430,7 @@
 
 .table-schedule th{
     color: var(--color-crema);
+    width: 70px;
 }
 
 .table-schedule td:not(:empty):not(:first-child){
@@ -451,6 +452,7 @@
 .table-schedule td{
     text-align: center;
     color: var(--color-amarillo);
+    width: 70px;
 }
 /*--------------------------------------------------------------------------------*/
 /*                            Sección Animaciones                                 */
@@ -529,7 +531,7 @@
     }
 
     #grid-actividad-individual {
-        grid-template: auto auto 10vh auto 50vh auto / 25% 50% auto;
+        grid-template: auto auto 10vh auto 50vh auto / auto 50% auto;
         grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "left-side main-content main-content" "right-side main-content main-content" "footer footer footer";
     }
 
@@ -579,7 +581,7 @@
     }
 
     #grid-actividad-individual {
-        grid-template: auto auto 10vh 1fr 25% 20% / 100%;
+        grid-template: auto auto 10vh 1fr 60vh 20% / 100%;
         grid-template-areas: "header" "nav-container" "top-section" "main-content" "left-side" "footer";
     }
 
