@@ -94,9 +94,9 @@
     z-index: 30;
 }
 
-.top-section{
-    background-color:#FFCB3A;
-    background: linear-gradient(180deg, rgba(255,203,58,1) 0%, rgba(255,203,58,0.85) 30%, rgba(81,29,71,1) 100%);
+.top-section {
+    background-color: #FFCB3A;
+    background: linear-gradient(180deg, rgba(255, 203, 58, 1) 0%, rgba(255, 203, 58, 0.85) 30%, rgba(81, 29, 71, 1) 100%);
     text-align: center;
 }
 
@@ -117,7 +117,7 @@
     position: absolute;
 }
 
-.carrousel-side-size{
+.carrousel-side-size {
     width: 90vw;
     height: 38vh;
     overflow: hidden;
@@ -235,6 +235,10 @@
     /* color: #4cdde9; */
 }
 
+.footer-ul h3{
+    font-size: 1.4em;
+}
+
 .footer-flex-row a {
     /* color:#4cdde9; */
     /* color: rgba(255,79,97,1); */
@@ -248,15 +252,81 @@
 
 
 /*--------------------------------------------------------------------------------*/
-/* Página: Actividades.html                                                     */
+/* Página: Actividades.html                                                       */
 /*--------------------------------------------------------------------------------*/
+.width-100{
+    width: 100vw;
+}
+.width-50{
+    width: 50vw;
+}
+
+.width-33{
+    width:30vw;
+}
+
+.inline-container{
+    display: inline-block;    
+    position: relative;
+    height: 20vh;    
+}
+
+.actividades-top-section {
+    position: relative;
+    width: 100vw;
+    height: 100%;    
+    background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+            rgba(81, 29, 71, 0.6)),
+        url('../imgs/actividades-top-section-yoga-class-1920-1280.jpg');
+    background-repeat: no-repeat;
+    background-position: 30% 62%;
+}
+
+.actividades-main-phrase {
+    width: 100%;
+    position: relative;
+    top: 45%;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-size: 4em;
+    font-weight: bolder;    
+    color:rgba(255, 203, 58, 1);
+    text-shadow: -2px 3px black;
+}
+
+.actividades-titles{
+    width: 100%;    
+    text-align: center;
+    font-family: 'Josefin Sans';
+    color: rgba(255, 203, 58, 1);
+    text-shadow: -2px 3px black;
+}
+
+#actividades-nuestras-act{
+    font-size: 2em;
+    position: relative;
+    top:36%;
+}
+
+.actividades-main-phrase:hover{
+    animation: heartBeat;
+    /* https://animate.style/ | referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+}
 
 .activities-parent {
     column-gap: 1vw;
+    /* width: 100vw; */
+}
+
+.separator{
+    border: 2px solid rgba(255, 203, 58, 1);
+    position: relative;
+    top:45%;
 }
 
 .tile {
-    border: 2px dotted black;
+    /* border: 2px dotted black; */
     width: 23vw;
     height: 28vh;
     min-width: 420px;
@@ -269,9 +339,10 @@
     text-align: center;
     width: 100%;
     position: absolute;
-    bottom: 40%;
-    color: blanchedalmond;
+    bottom: 40%;    
+    color:rgba(255, 203, 58, 1);
     font-family: 'Josefin Sans';
+    text-shadow: -2px 3px black;
     z-index: 50;
 }
 
@@ -331,22 +402,54 @@
 }
 
 /*--------------------------------------------------------------------------------*/
+/* Página: Contacto.html                                                       */
+/*--------------------------------------------------------------------------------*/
+
+#contacto-top-section-img{
+    background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+            rgba(81, 29, 71, 0.6)),
+        url('../imgs/contact-top-section-1920.jpg');
+}
+
+/*--------------------------------------------------------------------------------*/
 /*                            Sección Animaciones                                 */
 /*--------------------------------------------------------------------------------*/
 @keyframes rotarCubo {
-    0% { transform: rotateY(0deg) rotateX(0deg); }
-    15% { transform: rotateY(0deg) rotateX(0deg); }
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
 
-    25% { transform: rotateY(-90deg) rotateX(0deg); }
-    40% { transform: rotateY(-90deg) rotateX(0deg); }
+    15% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
 
-    50% { transform: rotateY(-180deg) rotateX(0deg); }
-    65% { transform: rotateY(-180deg) rotateX(0deg); }
+    25% {
+        transform: rotateY(-90deg) rotateX(0deg);
+    }
 
-    75% { transform: rotateY(-270deg) rotateX(0deg); }
-    90% { transform: rotateY(-270deg) rotateX(0deg); }
+    40% {
+        transform: rotateY(-90deg) rotateX(0deg);
+    }
 
-    100% { transform: rotateY(-360deg) rotateX(0deg); }
+    50% {
+        transform: rotateY(-180deg) rotateX(0deg);
+    }
+
+    65% {
+        transform: rotateY(-180deg) rotateX(0deg);
+    }
+
+    75% {
+        transform: rotateY(-270deg) rotateX(0deg);
+    }
+
+    90% {
+        transform: rotateY(-270deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateY(-360deg) rotateX(0deg);
+    }
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -358,7 +461,12 @@
     height: 100vh;
     display: grid;
     grid-template: auto 40vh 50% auto / 20% 60% 20%;
-    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content right-side""footer footer footer";
+}
+
+#grid-actividades {
+    grid-template: auto 50vh 50% auto / 20% 60% 20%;
+    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
 }
 
 .grid-header {
@@ -385,16 +493,24 @@
     grid-area: right-side;
 }
 
+
+
 /*--------------------------------------------------------------------------------*/
 /*                            Sección mediaqueries                                */
 /*--------------------------------------------------------------------------------*/
 
 @media only screen and (max-width: 1400px) {
 
-    .grid-container{
-        grid-template: auto auto 30vh 50% auto / 20% 60% 20%;
-        grid-template-areas: "header header header" "nav-container nav-container nav-container""top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+    .grid-container {
+        grid-template: auto auto auto 50% auto / 20% 60% 20%;
+        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""main-content main-content right-side""footer footer footer";
     }
+
+    #grid-actividades {
+        grid-template: auto auto auto auto auto / 20% 60% 20%;
+        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    }
+
 
     .hearder-menu:hover {
         transform: translateY(8px) scale(1.2, 1.2);
@@ -418,26 +534,27 @@
         margin: 1vh auto;
     }
 
-    .carrousel-side-size{
+    .carrousel-side-size {
         width: 90vw;
         height: 28vh;
         overflow: hidden;
     }
 
+
 }
 
 @media only screen and (max-width: 800px) {
 
-    .grid-container{
+    .grid-container {
         grid-template: auto auto 20vh 1fr 15% 20% / 100%;
-        grid-template-areas: "header" "nav-container" "top-section" "main-content" "right-side" "footer";
+        grid-template-areas: "header""nav-container""top-section""main-content""right-side""footer";
     }
 
-    .hearder-menu-option{
+    .hearder-menu-option {
         font-size: 1.1em;
     }
 
-    .header-image-item{
+    .header-image-item {
         width: 75%;
     }
 
@@ -447,7 +564,7 @@
         margin: 1vh auto;
     }
 
-    .carrousel-side-size{
+    .carrousel-side-size {
         width: 90vw;
         height: 18vh;
         overflow: hidden;
