@@ -2,10 +2,25 @@
 /*                            Configuraciones Generales                           */
 /*--------------------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&display=swap&family=Carter+One&display=swap&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&family=Carter+One&family=Josefin+Sans:ital,wght@0,400;0,700;1,700&display=swap&family=Kaushan+Script&display=swap');
 
 * {
     margin: 0px;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*                                    Colores                                     */
+/*--------------------------------------------------------------------------------*/
+
+:root{
+    --color-rosa: rgba(255, 79, 97, 1);
+    --color-rosa-80: rgba(255, 79, 97, 0.8);
+    --color-amarillo: rgba(255, 203, 58, 1);
+    --color-amarillo-80: rgba(255, 203, 58, 0.8);
+    --color-violeta: rgba(81,29,71, 1);
+    --color-violeta-80: rgba(81,29,71, 0.8);
+    --color-negro: rgba(30, 36, 37, 1);
+    --color-crema: rgba(255, 255, 226, 1);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -23,8 +38,8 @@
 }
 
 .header {
-    background-color: rgb(255, 79, 97);
-    background: linear-gradient(180deg, rgba(255, 79, 97, 1) 0%, rgba(255, 79, 97, 0.84) 65%, rgba(255, 203, 58, 1) 100%);
+    background-color: var(--color-rosa);
+    background: linear-gradient(180deg, var(--color-rosa) 0%, var(--color-rosa-80) 65%, var(--color-amarillo) 100%);
     position: relative;
 }
 
@@ -95,8 +110,8 @@
 }
 
 .top-section{
-    background-color:#FFCB3A;
-    background: linear-gradient(180deg, rgba(255,203,58,1) 0%, rgba(255,203,58,0.85) 30%, rgba(81,29,71,1) 100%);
+    background-color:var(--color-amarillo);
+    background: linear-gradient(180deg, var(--color-amarillo) 0%, var(--color-amarillo-80) 30%, var(--color-violeta) 100%);
     text-align: center;
 }
 
@@ -148,11 +163,21 @@
 .main-content {
     background-color: #511D47;
     font-family: 'Josefin Sans';
+    font-weight: 400;
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    font-size: large;
 }
 
 .right-side {
     background-color: #511D47;
     font-family: 'Josefin Sans';
+}
+
+.left-side {
+    background-color: #511D47;
+    font-family: 'Josefin Sans';
+    
 }
 
 .aside-parent {
@@ -306,15 +331,12 @@
     background-repeat: no-repeat;
 }
 
-
 #tile-gym {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.1)),
         url('../imgs/Equipamiento-480-320.jpg');
     background-repeat: no-repeat;
 }
-
-
 
 #tile-yoga {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1),
@@ -330,6 +352,92 @@
     background-repeat: no-repeat;
 }
 
+/*--------------------------------------------------------------------------------*/
+/* Actividades individuales                                                       */
+/*--------------------------------------------------------------------------------*/
+.image-teacher{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-teacher p{
+    font-size: 1.5em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-crema)
+}
+
+.image-teacher img{
+    object-fit: cover;
+    width: 95%;
+    height: 95%;
+    border-radius: 20px;
+}
+
+.activity-phrase{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 350%;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-shadow: rgba(255, 255, 255, 0.7) 0.1em 0.1em;
+}
+
+.main-content-activity h1:first-child{
+    text-align: center;
+    color: var(--color-amarillo);
+}
+.main-content-activity >p{
+    text-align: center;
+}
+
+.activity-section-description iframe{
+    width: 560px;
+    height: 315px;
+}
+
+.activity-section-description li{
+    font-weight: bolder;
+}
+
+.activity-section-schedule p{
+    font-weight: bolder;
+}
+
+.table-schedule tbody{
+    background-color: var(--color-rosa);
+}
+
+.table-schedule th{
+    color: var(--color-crema);
+}
+
+.table-schedule td:not(:empty):not(:first-child){
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+
+}
+
+.table-schedule tr td:first-child{
+    /*color: var(--color-rosa);*/
+    color: var(--color-crema);
+}
+
+.table-schedule tr:nth-child(odd){
+    background-color: var(--color-violeta-80);
+}
+.table-schedule tr:nth-child(even)
+{
+    background-color: var(--color-violeta);
+}
+.table-schedule td{
+    text-align: center;
+    color: var(--color-amarillo);
+}
 /*--------------------------------------------------------------------------------*/
 /*                            Sección Animaciones                                 */
 /*--------------------------------------------------------------------------------*/
@@ -350,7 +458,7 @@
 }
 
 /*--------------------------------------------------------------------------------*/
-/*                            Sección Configuración Grid                          */
+/*                            Sección Configuración Grids                          */
 /*--------------------------------------------------------------------------------*/
 
 .grid-container {
@@ -359,6 +467,11 @@
     display: grid;
     grid-template: auto 40vh 50% auto / 20% 60% 20%;
     grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+}
+
+#grid-actividad-individual {
+    grid-template: auto 15vh auto auto / 20% 60% 20%;
+    grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content main-content" "footer footer footer";
 }
 
 .grid-header {
@@ -385,6 +498,11 @@
     grid-area: right-side;
 }
 
+.grid-left-side {
+    grid-area: left-side ;
+}
+
+
 /*--------------------------------------------------------------------------------*/
 /*                            Sección mediaqueries                                */
 /*--------------------------------------------------------------------------------*/
@@ -393,7 +511,12 @@
 
     .grid-container{
         grid-template: auto auto 30vh 50% auto / 20% 60% 20%;
-        grid-template-areas: "header header header" "nav-container nav-container nav-container""top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+    }
+
+    #grid-actividad-individual {
+        grid-template: auto auto 10vh auto auto / 20% 60% 20%;
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "left-side main-content main-content" "footer footer footer";
     }
 
     .hearder-menu:hover {
@@ -424,6 +547,9 @@
         overflow: hidden;
     }
 
+    .activity-phrase{
+        font-size: 250%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -433,6 +559,11 @@
         grid-template-areas: "header" "nav-container" "top-section" "main-content" "right-side" "footer";
     }
 
+    #grid-actividad-individual {
+        grid-template: auto auto 10vh 1fr 25% 20% / 100%;
+        grid-template-areas: "header" "nav-container" "top-section" "main-content" "left-side" "footer";
+    }
+
     .hearder-menu-option{
         font-size: 1.1em;
     }
@@ -440,6 +571,7 @@
     .header-image-item{
         width: 75%;
     }
+
 
     #top-section-carrousel {
         width: 90vw;
@@ -451,6 +583,14 @@
         width: 90vw;
         height: 18vh;
         overflow: hidden;
+    }
+
+    .image-teacher img{
+        object-fit: contain;
+    }
+
+    .activity-phrase{
+        font-size: 200%;
     }
 }
 
@@ -517,5 +657,9 @@
 
     .nav-container ul {
         display: block;
+    }
+
+    .activity-phrase{
+        font-size: 150%;
     }
 }
