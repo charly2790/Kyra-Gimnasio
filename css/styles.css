@@ -2,10 +2,25 @@
 /*                            Configuraciones Generales                           */
 /*--------------------------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&display=swap&family=Carter+One&display=swap&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@600&family=Quantico:wght@700&family=Shadows+Into+Light&family=Carter+One&family=Josefin+Sans:ital,wght@0,400;0,700;1,700&display=swap&family=Kaushan+Script&display=swap');
 
 * {
     margin: 0px;
+}
+
+/*--------------------------------------------------------------------------------*/
+/*                                    Colores                                     */
+/*--------------------------------------------------------------------------------*/
+
+:root{
+    --color-rosa: rgba(255, 79, 97, 1);
+    --color-rosa-80: rgba(255, 79, 97, 0.8);
+    --color-amarillo: rgba(255, 203, 58, 1);
+    --color-amarillo-80: rgba(255, 203, 58, 0.8);
+    --color-violeta: rgba(81,29,71, 1);
+    --color-violeta-80: rgba(81,29,71, 0.8);
+    --color-negro: rgba(30, 36, 37, 1);
+    --color-crema: rgba(255, 255, 226, 1);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -23,8 +38,8 @@
 }
 
 .header {
-    background-color: rgb(255, 79, 97);
-    background: linear-gradient(180deg, rgba(255, 79, 97, 1) 0%, rgba(255, 79, 97, 0.84) 65%, rgba(255, 203, 58, 1) 100%);
+    background-color: var(--color-rosa);
+    background: linear-gradient(180deg, var(--color-rosa) 0%, var(--color-rosa-80) 65%, var(--color-amarillo) 100%);
     position: relative;
 }
 
@@ -94,9 +109,9 @@
     z-index: 30;
 }
 
-.top-section {
-    background-color: #FFCB3A;
-    background: linear-gradient(180deg, rgba(255, 203, 58, 1) 0%, rgba(255, 203, 58, 0.85) 30%, rgba(81, 29, 71, 1) 100%);
+.top-section{
+    background-color:var(--color-amarillo);
+    background: linear-gradient(180deg, var(--color-amarillo) 0%, var(--color-amarillo-80) 30%, var(--color-violeta) 100%);
     text-align: center;
 }
 
@@ -117,7 +132,7 @@
     position: absolute;
 }
 
-.carrousel-side-size {
+.carrousel-side-size{
     width: 90vw;
     height: 38vh;
     overflow: hidden;
@@ -148,10 +163,18 @@
 .main-content {
     background-color: #511D47;
     font-family: 'Josefin Sans';
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    font-size: large;
 }
 
 .right-side {
-    background-color: #511D47;
+    background-color: var(--color-violeta);
+    font-family: 'Josefin Sans';
+}
+
+.left-side {
+    background-color: var(--color-violeta);
     font-family: 'Josefin Sans';
 }
 
@@ -186,7 +209,6 @@
 }
 
 .footer-flex-row {
-    padding: 1%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -252,10 +274,10 @@
 
 
 /*--------------------------------------------------------------------------------*/
-/* Página: Actividades.html                                                       */
+/* Página: Actividades.html                                                     */
 /*--------------------------------------------------------------------------------*/
 .width-100 {
-    width: 100vw;
+    width: 100%;
 }
 
 .width-50 {
@@ -378,15 +400,12 @@
     background-repeat: no-repeat;
 }
 
-
 #tile-gym {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.1)),
         url('../imgs/Equipamiento-480-320.jpg');
     background-repeat: no-repeat;
 }
-
-
 
 #tile-yoga {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1),
@@ -402,6 +421,113 @@
     background-repeat: no-repeat;
 }
 
+/*--------------------------------------------------------------------------------*/
+/* Actividades individuales                                                       */
+/*--------------------------------------------------------------------------------*/
+.image-teacher{
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.image-teacher p{
+    font-size: 2em;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-crema)
+}
+
+.image-teacher img{
+    object-fit:cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    min-width: 320px;
+}
+
+.activity-phrase{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 350%;
+    color: rgb(0, 0, 0);
+    font-weight: bolder;
+    text-shadow: rgba(255, 255, 255, 0.7) 0.1em 0.1em;
+}
+
+.main-content-activity{
+    padding: 2%;
+}
+
+.main-content-activity h1:first-child{
+    text-align: center;
+    color: var(--color-amarillo);
+}
+.main-content-activity >p{
+    text-align: center;
+}
+
+.main-content-activity .activity-section-schedule{
+    text-align: center;
+}
+
+.activity-section-description iframe{
+    width: 560px;
+    height: 315px;
+    margin-top: 2%;
+    margin-right: 10px;
+}
+
+.activity-section-description li{
+    font-weight: bolder;
+}
+
+.activity-section-description h2{
+    color: var(--color-amarillo-80);
+}
+
+.activity-section-schedule h2{
+    color: var(--color-amarillo-80);
+}
+
+.activity-section-schedule p{
+    font-weight: bolder;
+}
+
+.table-schedule{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.table-schedule tbody{
+    background-color: var(--color-rosa);
+}
+
+.table-schedule th{
+    color: var(--color-crema);
+    width: 70px;
+}
+
+.table-schedule td:not(:empty):not(:first-child){
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}
+
+.table-schedule tr td:first-child{
+    color: var(--color-crema);
+}
+
+.table-schedule tr:nth-child(odd){
+    background-color: var(--color-violeta-80);
+}
+.table-schedule tr:nth-child(even)
+{
+    background-color: var(--color-violeta);
+}
+.table-schedule td{
+    text-align: center;
+    color: var(--color-amarillo);
+    width: 70px;
+}
 /*--------------------------------------------------------------------------------*/
 /* Página: Contacto.html                                                       */
 /*--------------------------------------------------------------------------------*/
@@ -528,7 +654,7 @@ min-width: 672px !important;
 
     50% {
         transform: rotateY(-180deg) rotateX(0deg);
-    }
+}
 
     65% {
         transform: rotateY(-180deg) rotateX(0deg);
@@ -548,7 +674,7 @@ min-width: 672px !important;
 }
 
 /*--------------------------------------------------------------------------------*/
-/*                            Sección Configuración Grid                          */
+/*                            Sección Configuración Grids                          */
 /*--------------------------------------------------------------------------------*/
 
 .grid-container {
@@ -556,17 +682,22 @@ min-width: 672px !important;
     height: 100vh;
     display: grid;
     grid-template: auto 40vh 50% auto / 20% 60% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content right-side""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+}
+
+#grid-actividad-individual {
+    grid-template: auto 15vh auto auto / 30% 50% 20%;
+    grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content main-content" "footer footer footer";
 }
 
 #grid-actividades {
     grid-template: auto 50vh auto auto / 20% 60% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
 }
 
 #grid-contacto {
     grid-template: auto 50vh auto auto / 20% 60% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
 }
 
 .grid-form {
@@ -597,6 +728,9 @@ min-width: 672px !important;
     grid-area: right-side;
 }
 
+.grid-left-side {
+    grid-area: left-side ;
+}
 
 
 /*--------------------------------------------------------------------------------*/
@@ -606,9 +740,14 @@ min-width: 672px !important;
 
 @media only screen and (max-width: 1400px) {
 
-    .grid-container {
+    .grid-container{
         grid-template: auto auto auto 50% auto / 20% 60% 20%;
-        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""main-content main-content right-side""footer footer footer";
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+    }
+
+    #grid-actividad-individual {
+        grid-template: auto auto 10vh auto 50vh auto / auto 50% auto;
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "left-side main-content main-content" "right-side main-content main-content" "footer footer footer";
     }
 
     .hearder-menu:hover {
@@ -633,7 +772,7 @@ min-width: 672px !important;
         margin: 1vh auto;
     }
 
-    .carrousel-side-size {
+    .carrousel-side-size{
         width: 90vw;
         height: 28vh;
         overflow: hidden;
@@ -641,7 +780,14 @@ min-width: 672px !important;
 
     .actividades-main-phrase {
         font-size: 3em;
-        text-shadow: -1px 1.5px black;
+        text-shadow: -1px 1.5px black;}
+    .activity-phrase{
+        font-size: 250%;
+    }
+
+    .activity-section-description iframe{
+        width: 392px;
+        height: 220px;
     }
 
     .contacto-container>div,
@@ -688,18 +834,24 @@ min-width: 672px !important;
 
 @media only screen and (max-width: 800px) {
 
-    .grid-container {
+    .grid-container{
         grid-template: auto auto 20vh 1fr 15% 20% / 100%;
-        grid-template-areas: "header""nav-container""top-section""main-content""right-side""footer";
+        grid-template-areas: "header" "nav-container" "top-section" "main-content" "right-side" "footer";
     }
 
-    .hearder-menu-option {
+    #grid-actividad-individual {
+        grid-template: auto auto 10vh 1fr 60vh 20% / 100%;
+        grid-template-areas: "header" "nav-container" "top-section" "main-content" "left-side" "footer";
+    }
+
+    .hearder-menu-option{
         font-size: 1.1em;
     }
 
-    .header-image-item {
+    .header-image-item{
         width: 75%;
     }
+
 
     #top-section-carrousel {
         width: 90vw;
@@ -707,7 +859,7 @@ min-width: 672px !important;
         margin: 1vh auto;
     }
 
-    .carrousel-side-size {
+    .carrousel-side-size{
         width: 90vw;
         height: 18vh;
         overflow: hidden;
@@ -718,6 +870,19 @@ min-width: 672px !important;
         font-size: 2em;
         text-shadow: -1px 1.5px black;
     }
+    .image-teacher img{
+        object-fit: contain;
+    }
+
+    .activity-phrase{
+        font-size: 200%;
+    }
+    
+    .activity-section-description iframe{
+        width: 392px;
+        height: 220px;
+    }
+
 
     .width-33 {
         width: 80vw;
@@ -765,7 +930,6 @@ min-width: 672px !important;
                 rgba(81, 29, 71, 0.6)),
             url('../imgs/kyras-gym-local-800.jpg');
     }
-
 }
 
 @media only screen and (max-width: 490px) {
@@ -835,6 +999,14 @@ min-width: 672px !important;
 
     .nav-container ul {
         display: block;
+    }
+
+    .activity-phrase{
+        font-size: 150%;
+    }
+
+    .activity-section-description iframe{
+        float:left;
     }
 
     .actividades-main-phrase {
