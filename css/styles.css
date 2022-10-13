@@ -479,11 +479,12 @@ form {
 /* Página: Nosotros.html                                                          */
 /*--------------------------------------------------------------------------------*/
 
-.about-us-picture-container{
+.about-us-picture-container {
     background-image: linear-gradient(rgba(81, 29, 71, 0.3),
     rgba(81, 29, 71, 0.6)),
 url('../imgs/kyras-team-672.jpg');
 min-height: 448px;
+min-width: 672px !important;
 }
 
 .about-us-text{
@@ -494,7 +495,7 @@ min-height: 448px;
 #nosotros-top-section-img {
     background-image: linear-gradient(rgba(81, 29, 71, 0.6),
             rgba(81, 29, 71, 0.6)),
-        url('../imgs/kyras-gym-local-1920.jpg');
+        url('../imgs/kyras-gym-local-1920.jpg');        
 }
 
 #about-us-main-phrase:hover {
@@ -653,7 +654,6 @@ min-height: 448px;
         margin-bottom: 5vh;
     }
 
-
     .contacto-ul li {
         margin: 1%;
         font-size: 1em;
@@ -683,8 +683,6 @@ min-height: 448px;
                 rgba(81, 29, 71, 0.6)),
             url('../imgs/kyras-gym-local-1400.jpg');
     }
-
-
 
 }
 
@@ -882,5 +880,14 @@ min-height: 448px;
                 rgba(81, 29, 71, 0.6)),
             url('../imgs/kyras-gym-local-490.jpg');
 
+    }
+
+    .about-us-picture-container {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.3),
+        rgba(81, 29, 71, 0.6)),
+    url('../imgs/kyras-team-470.jpg');
+        min-height: 313px;
+        min-width: 470px;
+        background-repeat: no-repeat;
     }
 }
