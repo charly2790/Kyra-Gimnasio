@@ -164,7 +164,6 @@
     background-color: #511D47;
     font-family: 'Josefin Sans';
     font-weight: 400;
-    padding: 2%;
     color: rgb(255, 255, 255);
     font-size: large;
 }
@@ -210,7 +209,6 @@
 }
 
 .footer-flex-row {
-    padding: 1%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -259,6 +257,10 @@
     /* color: #4cdde9; */
 }
 
+.footer-ul h3 {
+    font-size: 1.4em;
+}
+
 .footer-flex-row a {
     /* color:#4cdde9; */
     /* color: rgba(255,79,97,1); */
@@ -274,13 +276,80 @@
 /*--------------------------------------------------------------------------------*/
 /* Página: Actividades.html                                                     */
 /*--------------------------------------------------------------------------------*/
+.width-100 {
+    width: 100%;
+}
+
+.width-50 {
+    width: 50vw;
+}
+
+.width-33 {
+    width: 30vw;
+}
+
+.inline-container {
+    display: inline-block;
+    position: relative;
+    height: 20vh;
+}
+
+.actividades-top-section {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+            rgba(81, 29, 71, 0.6)),
+        url('../imgs/actividades-top-section-yoga-class-1920-1280.jpg');
+    background-repeat: no-repeat;
+    background-position: 30% 62%;
+}
+
+.actividades-main-phrase {
+    width: 100%;
+    position: relative;
+    top: 45%;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    font-size: 4em;
+    font-weight: bolder;
+    color: rgba(255, 203, 58, 1);
+    text-shadow: -2px 3px black;
+}
+
+.actividades-titles {
+    width: 100%;
+    text-align: center;
+    font-family: 'Josefin Sans';
+    color: rgba(255, 203, 58, 1);
+    text-shadow: -2px 3px black;
+}
+
+#actividades-nuestras-act {
+    font-size: 2em;
+    position: relative;
+    top: 36%;
+}
+
+.actividades-main-phrase:hover {
+    animation: heartBeat;
+    /* https://animate.style/ | referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+}
 
 .activities-parent {
     column-gap: 1vw;
+    /* width: 100vw; */
+}
+
+.separator {
+    border: 2px solid rgba(255, 203, 58, 1);
+    position: relative;
+    top: 45%;
 }
 
 .tile {
-    border: 2px dotted black;
+    /* border: 2px dotted black; */
     width: 23vw;
     height: 28vh;
     min-width: 420px;
@@ -294,8 +363,9 @@
     width: 100%;
     position: absolute;
     bottom: 40%;
-    color: blanchedalmond;
+    color: rgba(255, 203, 58, 1);
     font-family: 'Josefin Sans';
+    text-shadow: -2px 3px black;
     z-index: 50;
 }
 
@@ -384,6 +454,10 @@
     text-shadow: rgba(255, 255, 255, 0.7) 0.1em 0.1em;
 }
 
+.main-content-activity{
+    padding: 2%;
+}
+
 .main-content-activity h1:first-child{
     text-align: center;
     color: var(--color-amarillo);
@@ -455,22 +529,147 @@
     width: 70px;
 }
 /*--------------------------------------------------------------------------------*/
+/* Página: Contacto.html                                                       */
+/*--------------------------------------------------------------------------------*/
+
+#contacto-top-section-img {
+    background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+            rgba(81, 29, 71, 0.6)),
+        url('../imgs/contact-top-section-1920.jpg');
+}
+
+
+.contacto-form-grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    border: 1px solid rgba(255, 203, 58, 1);
+    padding: 10px;
+
+}
+
+.contacto-form-item-x2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.contacto-form-item {
+    width: 99%;
+}
+
+.contacto-form-field {
+    font-family: "Josefin Sans";
+    font-size: 1.5em;
+    color: white;
+    background-color: rgba(81, 29, 71, 1);
+    border: 1px solid rgba(255, 203, 58, 1);
+    width: 99%;
+}
+
+.contacto-container {
+    width: 100%;
+    column-gap: 10px;
+}
+
+.contacto-container>div,
+form {
+    width: 35%;
+    /* border: 1px solid white; */
+    /* position: relative; */
+    min-width: 300px;
+}
+
+.contacto-ul {
+    /*Remover la viñeta*/
+    list-style-type: none;
+    /*Quitar margenes de la lista*/
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    top: 30%;
+    left: 10%;
+}
+
+.contacto-ul li {
+    margin: 3%;
+    font-size: 1.2em;
+    color: rgba(255, 203, 58, 1);
+}
+
+.contacto-ul h2 {
+    color: rgba(255, 79, 97, 1);
+    text-shadow: gray -2px 1px;
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Página: Nosotros.html                                                          */
+/*--------------------------------------------------------------------------------*/
+
+.about-us-picture-container{
+    background-image: linear-gradient(rgba(81, 29, 71, 0.3),
+    rgba(81, 29, 71, 0.6)),
+url('../imgs/kyras-team-672.jpg');
+min-height: 448px;
+}
+
+.about-us-text{
+    font-size: 1.2em;
+    color: rgba(255, 203, 58, 1);
+}
+
+#nosotros-top-section-img {
+    background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+            rgba(81, 29, 71, 0.6)),
+        url('../imgs/kyras-gym-local-1920.jpg');
+}
+
+#about-us-main-phrase:hover {
+    animation: tada;
+    /* https://animate.style/ | referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s;
+}
+
+
+
+/*--------------------------------------------------------------------------------*/
 /*                            Sección Animaciones                                 */
 /*--------------------------------------------------------------------------------*/
 @keyframes rotarCubo {
-    0% { transform: rotateY(0deg) rotateX(0deg); }
-    15% { transform: rotateY(0deg) rotateX(0deg); }
+    0% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
 
-    25% { transform: rotateY(-90deg) rotateX(0deg); }
-    40% { transform: rotateY(-90deg) rotateX(0deg); }
+    15% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
 
-    50% { transform: rotateY(-180deg) rotateX(0deg); }
-    65% { transform: rotateY(-180deg) rotateX(0deg); }
+    25% {
+        transform: rotateY(-90deg) rotateX(0deg);
+    }
 
-    75% { transform: rotateY(-270deg) rotateX(0deg); }
-    90% { transform: rotateY(-270deg) rotateX(0deg); }
+    40% {
+        transform: rotateY(-90deg) rotateX(0deg);
+    }
 
-    100% { transform: rotateY(-360deg) rotateX(0deg); }
+    50% {
+        transform: rotateY(-180deg) rotateX(0deg);
+}
+
+    65% {
+        transform: rotateY(-180deg) rotateX(0deg);
+    }
+
+    75% {
+        transform: rotateY(-270deg) rotateX(0deg);
+    }
+
+    90% {
+        transform: rotateY(-270deg) rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateY(-360deg) rotateX(0deg);
+    }
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -488,6 +687,20 @@
 #grid-actividad-individual {
     grid-template: auto 15vh auto auto / 30% 50% 20%;
     grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content main-content" "footer footer footer";
+}
+
+#grid-actividades {
+    grid-template: auto 50vh auto auto / 20% 60% 20%;
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
+}
+
+#grid-contacto {
+    grid-template: auto 50vh auto auto / 20% 60% 20%;
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
+}
+
+.grid-form {
+    width: 80;
 }
 
 .grid-header {
@@ -523,10 +736,11 @@
 /*                            Sección mediaqueries                                */
 /*--------------------------------------------------------------------------------*/
 
+
 @media only screen and (max-width: 1400px) {
 
     .grid-container{
-        grid-template: auto auto 30vh 50% auto / 20% 60% 20%;
+        grid-template: auto auto auto 50% auto / 20% 60% 20%;
         grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
     }
 
@@ -563,6 +777,9 @@
         overflow: hidden;
     }
 
+    .actividades-main-phrase {
+        font-size: 3em;
+        text-shadow: -1px 1.5px black;}
     .activity-phrase{
         font-size: 250%;
     }
@@ -570,6 +787,47 @@
     .activity-section-description iframe{
         width: 392px;
         height: 220px;
+    }
+
+    .contacto-container>div,
+    form {
+        width: 80vw;
+        max-width: 400px;
+    }
+
+    .contacto-container>div {
+        margin-bottom: 5vh;
+    }
+
+
+    .contacto-ul li {
+        margin: 1%;
+        font-size: 1em;
+        color: rgba(255, 203, 58, 1);
+        /* text-align: center; */
+    }
+
+    .contacto-ul h2 {
+        color: rgba(255, 79, 97, 1);
+        text-shadow: gray -2px 1px;
+    }
+
+    .actividades-top-section {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/actividades-top-section-yoga-class-1400.jpg');
+    }
+
+    #contacto-top-section-img {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/contact-top-section-1400.jpg');
+    }
+
+    #nosotros-top-section-img {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/kyras-gym-local-1400.jpg');
     }
 }
 
@@ -606,6 +864,11 @@
         overflow: hidden;
     }
 
+    .actividades-main-phrase {
+
+        font-size: 2em;
+        text-shadow: -1px 1.5px black;
+    }
     .image-teacher img{
         object-fit: contain;
     }
@@ -618,9 +881,61 @@
         width: 392px;
         height: 220px;
     }
+
+
+    .width-33 {
+        width: 80vw;
+    }
+
+    .inline-container {
+        height: 5vh;
+    }
+
+    #actividades-nuestras-act {
+        top: 0%;
+    }
+
+    .contacto-ul {
+        top: 0%;
+        left: 0%;
+    }
+
+    .contacto-ul li {
+        margin: 1%;
+        font-size: 1em;
+        color: rgba(255, 203, 58, 1);
+        text-align: center;
+    }
+
+    .contacto-container>div,
+    form {
+        min-width: 400px;
+    }
+
+    .actividades-top-section {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/actividades-top-section-yoga-class-800.jpg');
+    }
+
+    #contacto-top-section-img {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/contact-top-section-800.jpg');
+    }
+
+    #nosotros-top-section-img {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/kyras-gym-local-800.jpg');
+    }
 }
 
 @media only screen and (max-width: 490px) {
+
+    .width-33 {
+        width: 80vw;
+    }
 
     .hearder-menu-option {
         font-size: 1em;
@@ -691,5 +1006,50 @@
 
     .activity-section-description iframe{
         float:left;
+    }
+
+    .actividades-main-phrase {
+
+        font-size: 1.5em;
+        text-shadow: -1px 1px black;
+    }
+
+    .inline-container {
+        height: 3vh;
+    }
+
+    #actividades-nuestras-act {
+        top: -35%;
+    }
+
+    #grid-actividades {
+        grid-template: auto 30vh auto auto / 20% 60% 20%;
+        grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    }
+
+    #grid-contacto {
+        grid-template: auto 30vh auto auto / 20% 60% 20%;
+        grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    }
+
+    .actividades-top-section {
+        height: 100%;
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/actividades-top-section-yoga-class-490.jpg');
+    }
+
+    #contacto-top-section-img {
+        height: 100%;
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/contact-top-section-490.jpg');
+    }
+
+    #nosotros-top-section-img {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.6),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/kyras-gym-local-490.jpg');
+
     }
 }
