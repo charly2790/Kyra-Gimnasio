@@ -12,13 +12,13 @@
 /*                                    Colores                                     */
 /*--------------------------------------------------------------------------------*/
 
-:root{
+:root {
     --color-rosa: rgba(255, 79, 97, 1);
     --color-rosa-80: rgba(255, 79, 97, 0.8);
     --color-amarillo: rgba(255, 203, 58, 1);
     --color-amarillo-80: rgba(255, 203, 58, 0.8);
-    --color-violeta: rgba(81,29,71, 1);
-    --color-violeta-80: rgba(81,29,71, 0.8);
+    --color-violeta: rgba(81, 29, 71, 1);
+    --color-violeta-80: rgba(81, 29, 71, 0.8);
     --color-negro: rgba(30, 36, 37, 1);
     --color-crema: rgba(255, 255, 226, 1);
 }
@@ -109,8 +109,8 @@
     z-index: 30;
 }
 
-.top-section{
-    background-color:var(--color-amarillo);
+.top-section {
+    background-color: var(--color-amarillo);
     background: linear-gradient(180deg, var(--color-amarillo) 0%, var(--color-amarillo-80) 30%, var(--color-violeta) 100%);
     text-align: center;
 }
@@ -132,7 +132,7 @@
     position: absolute;
 }
 
-.carrousel-side-size{
+.carrousel-side-size {
     width: 90vw;
     height: 38vh;
     overflow: hidden;
@@ -424,13 +424,13 @@
 /*--------------------------------------------------------------------------------*/
 /* Actividades individuales                                                       */
 /*--------------------------------------------------------------------------------*/
-.image-teacher{
+.image-teacher {
     align-items: center;
     width: 100%;
     height: 100%;
 }
 
-.image-teacher p{
+.image-teacher p {
     font-size: 2em;
     font-style: italic;
     font-weight: bold;
@@ -438,15 +438,15 @@
     color: var(--color-crema)
 }
 
-.image-teacher img{
-    object-fit:cover;
+.image-teacher img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 50px;
     min-width: 320px;
 }
 
-.activity-phrase{
+.activity-phrase {
     font-family: 'Kaushan Script', cursive;
     font-size: 350%;
     color: rgb(0, 0, 0);
@@ -454,80 +454,83 @@
     text-shadow: rgba(255, 255, 255, 0.7) 0.1em 0.1em;
 }
 
-.main-content-activity{
+.main-content-activity {
     padding: 2%;
 }
 
-.main-content-activity h1:first-child{
+.main-content-activity h1:first-child {
     text-align: center;
     color: var(--color-amarillo);
 }
-.main-content-activity >p{
+
+.main-content-activity>p {
     text-align: center;
 }
 
-.main-content-activity .activity-section-schedule{
+.main-content-activity .activity-section-schedule {
     text-align: center;
 }
 
-.activity-section-description iframe{
+.activity-section-description iframe {
     width: 560px;
     height: 315px;
     margin-top: 2%;
     margin-right: 10px;
 }
 
-.activity-section-description li{
+.activity-section-description li {
     font-weight: bolder;
 }
 
-.activity-section-description h2{
+.activity-section-description h2 {
     color: var(--color-amarillo-80);
 }
 
-.activity-section-schedule h2{
+.activity-section-schedule h2 {
     color: var(--color-amarillo-80);
 }
 
-.activity-section-schedule p{
+.activity-section-schedule p {
     font-weight: bolder;
 }
 
-.table-schedule{
+.table-schedule {
     display: inline-flex;
     flex-direction: column;
 }
 
-.table-schedule tbody{
+.table-schedule tbody {
     background-color: var(--color-rosa);
 }
 
-.table-schedule th{
+.table-schedule th {
     color: var(--color-crema);
     width: 70px;
 }
 
-.table-schedule td:not(:empty):not(:first-child){
+.table-schedule td:not(:empty):not(:first-child) {
     background-color: var(--color-amarillo);
     color: var(--color-negro);
 }
 
-.table-schedule tr td:first-child{
+.table-schedule tr td:first-child {
     color: var(--color-crema);
 }
 
-.table-schedule tr:nth-child(odd){
+.table-schedule tr:nth-child(odd) {
     background-color: var(--color-violeta-80);
 }
-.table-schedule tr:nth-child(even)
-{
+
+.table-schedule tr:nth-child(even) {
     background-color: var(--color-violeta);
 }
-.table-schedule td{
+
+.table-schedule td {
     text-align: center;
     color: var(--color-amarillo);
     width: 70px;
 }
+
 /*--------------------------------------------------------------------------------*/
 /* Página: Contacto.html                                                       */
 /*--------------------------------------------------------------------------------*/
@@ -607,13 +610,19 @@ form {
 
 .about-us-picture-container {
     background-image: linear-gradient(rgba(81, 29, 71, 0.3),
-    rgba(81, 29, 71, 0.6)),
-url('../imgs/kyras-team-672.jpg');
-min-height: 448px;
-min-width: 672px !important;
+            rgba(81, 29, 71, 0.6)),
+        url('../imgs/kyras-team-672.jpg');
+    width:70%;
+    height:45vh;
+    background-position: 30% 62%;
+    /* min-width: 672px !important; */
 }
 
-.about-us-text{
+.about-us-text-container{
+    width: 30%;
+}
+
+.about-us-text {
     font-size: 1.2em;
     color: rgba(255, 203, 58, 1);
 }
@@ -621,7 +630,7 @@ min-width: 672px !important;
 #nosotros-top-section-img {
     background-image: linear-gradient(rgba(81, 29, 71, 0.6),
             rgba(81, 29, 71, 0.6)),
-        url('../imgs/kyras-gym-local-1920.jpg');        
+        url('../imgs/kyras-gym-local-1920.jpg');
 }
 
 #about-us-main-phrase:hover {
@@ -654,7 +663,7 @@ min-width: 672px !important;
 
     50% {
         transform: rotateY(-180deg) rotateX(0deg);
-}
+    }
 
     65% {
         transform: rotateY(-180deg) rotateX(0deg);
@@ -682,22 +691,22 @@ min-width: 672px !important;
     height: 100vh;
     display: grid;
     grid-template: auto 40vh 50% auto / 20% 60% 20%;
-    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content right-side""footer footer footer";
 }
 
 #grid-actividad-individual {
     grid-template: auto 15vh auto auto / 30% 50% 20%;
-    grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content main-content" "footer footer footer";
+    grid-template-areas: "header header header""top-section top-section top-section""left-side main-content main-content""footer footer footer";
 }
 
 #grid-actividades {
     grid-template: auto 50vh auto auto / 20% 60% 20%;
-    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
+    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
 }
 
 #grid-contacto {
     grid-template: auto 50vh auto auto / 20% 60% 20%;
-    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
+    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
 }
 
 .grid-form {
@@ -729,7 +738,7 @@ min-width: 672px !important;
 }
 
 .grid-left-side {
-    grid-area: left-side ;
+    grid-area: left-side;
 }
 
 
@@ -740,14 +749,14 @@ min-width: 672px !important;
 
 @media only screen and (max-width: 1400px) {
 
-    .grid-container{
+    .grid-container {
         grid-template: auto auto auto 50% auto / 20% 60% 20%;
-        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
+        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""main-content main-content right-side""footer footer footer";
     }
 
     #grid-actividad-individual {
         grid-template: auto auto 10vh auto 50vh auto / auto 50% auto;
-        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "left-side main-content main-content" "right-side main-content main-content" "footer footer footer";
+        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""left-side main-content main-content""right-side main-content main-content""footer footer footer";
     }
 
     .hearder-menu:hover {
@@ -772,7 +781,7 @@ min-width: 672px !important;
         margin: 1vh auto;
     }
 
-    .carrousel-side-size{
+    .carrousel-side-size {
         width: 90vw;
         height: 28vh;
         overflow: hidden;
@@ -780,12 +789,14 @@ min-width: 672px !important;
 
     .actividades-main-phrase {
         font-size: 3em;
-        text-shadow: -1px 1.5px black;}
-    .activity-phrase{
+        text-shadow: -1px 1.5px black;
+    }
+
+    .activity-phrase {
         font-size: 250%;
     }
 
-    .activity-section-description iframe{
+    .activity-section-description iframe {
         width: 392px;
         height: 220px;
     }
@@ -830,25 +841,38 @@ min-width: 672px !important;
             url('../imgs/kyras-gym-local-1400.jpg');
     }
 
+    .about-us-picture-container {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.3),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/kyras-team-470.jpg');        
+        height:266px;
+        margin-bottom: 2vh !important;        
+    }
+    .about-us-text-container {        
+        font-size: 0.8em;
+        height:266px;
+        margin-bottom: 2vh !important;      
+    }
+
 }
 
 @media only screen and (max-width: 800px) {
 
-    .grid-container{
+    .grid-container {
         grid-template: auto auto 20vh 1fr 15% 20% / 100%;
-        grid-template-areas: "header" "nav-container" "top-section" "main-content" "right-side" "footer";
+        grid-template-areas: "header""nav-container""top-section""main-content""right-side""footer";
     }
 
     #grid-actividad-individual {
         grid-template: auto auto 10vh 1fr 60vh 20% / 100%;
-        grid-template-areas: "header" "nav-container" "top-section" "main-content" "left-side" "footer";
+        grid-template-areas: "header""nav-container""top-section""main-content""left-side""footer";
     }
 
-    .hearder-menu-option{
+    .hearder-menu-option {
         font-size: 1.1em;
     }
 
-    .header-image-item{
+    .header-image-item {
         width: 75%;
     }
 
@@ -859,7 +883,7 @@ min-width: 672px !important;
         margin: 1vh auto;
     }
 
-    .carrousel-side-size{
+    .carrousel-side-size {
         width: 90vw;
         height: 18vh;
         overflow: hidden;
@@ -870,15 +894,16 @@ min-width: 672px !important;
         font-size: 2em;
         text-shadow: -1px 1.5px black;
     }
-    .image-teacher img{
+
+    .image-teacher img {
         object-fit: contain;
     }
 
-    .activity-phrase{
+    .activity-phrase {
         font-size: 200%;
     }
-    
-    .activity-section-description iframe{
+
+    .activity-section-description iframe {
         width: 392px;
         height: 220px;
     }
@@ -930,6 +955,15 @@ min-width: 672px !important;
                 rgba(81, 29, 71, 0.6)),
             url('../imgs/kyras-gym-local-800.jpg');
     }
+
+    .about-us-picture-container {
+        background-image: linear-gradient(rgba(81, 29, 71, 0.3),
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/kyras-team-400.jpg');        
+        min-width: 470px;
+        background-repeat: no-repeat;
+    }
+
 }
 
 @media only screen and (max-width: 490px) {
@@ -1001,12 +1035,12 @@ min-width: 672px !important;
         display: block;
     }
 
-    .activity-phrase{
+    .activity-phrase {
         font-size: 150%;
     }
 
-    .activity-section-description iframe{
-        float:left;
+    .activity-section-description iframe {
+        float: left;
     }
 
     .actividades-main-phrase {
@@ -1054,12 +1088,12 @@ min-width: 672px !important;
 
     }
 
-    .about-us-picture-container {
+    /* .about-us-picture-container {
         background-image: linear-gradient(rgba(81, 29, 71, 0.3),
         rgba(81, 29, 71, 0.6)),
     url('../imgs/kyras-team-470.jpg');
         min-height: 313px;
         min-width: 470px;
         background-repeat: no-repeat;
-    }
+    } */
 }
