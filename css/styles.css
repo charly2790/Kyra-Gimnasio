@@ -224,8 +224,11 @@
     align-items: center;
 }
 
+
 #footer-main-child {
-    row-gap: 15px;
+    row-gap: 5px;
+    /* justify-content: right; */
+    align-items: end;
 }
 
 #footer-second-child {
@@ -233,10 +236,8 @@
 }
 
 #footer-social-nw-container {
-    width: 66.66%;
-    align-items: stretch;
-    justify-content: space-between;
-    column-gap: 1.5vw;
+    width: 55%;    
+    justify-content: space-between;    
 }
 
 .footer-ul {
@@ -245,6 +246,10 @@
     /*Quitar margenes de la lista*/
     margin: 0px;
     padding: 0px;
+}
+
+#footer-ul-info{
+    margin-top: 5%;
 }
 
 .footer-ul li {
@@ -854,6 +859,11 @@ form {
         margin-bottom: 2vh !important;      
     }
 
+    #footer-social-nw-container {
+        width: 80%;
+        /* justify-content: space-between;    */
+    }
+
 }
 
 @media only screen and (max-width: 800px) {
@@ -964,6 +974,15 @@ form {
         background-repeat: no-repeat;
     }
 
+    #footer-ul-info li{    
+        text-align: center;
+    }
+
+    #footer-social-nw-container {
+        width: 100%;
+        justify-content: space-around;  
+    }
+
 }
 
 @media only screen and (max-width: 490px) {
@@ -992,10 +1011,10 @@ form {
         align-items: center;
     }
 
-    #footer-social-nw-container {
-        width: 57.75%;
-        justify-content: space-around;
-        column-gap: 1.5vw;
+    #footer-social-nw-container {        
+        width: 50%;
+        justify-content: space-between;        
+        column-gap: 1vw;
     }
 
     .hearder-menu:hover {
@@ -1088,12 +1107,7 @@ form {
 
     }
 
-    /* .about-us-picture-container {
-        background-image: linear-gradient(rgba(81, 29, 71, 0.3),
-        rgba(81, 29, 71, 0.6)),
-    url('../imgs/kyras-team-470.jpg');
-        min-height: 313px;
-        min-width: 470px;
-        background-repeat: no-repeat;
-    } */
+    #footer-main-child{
+        align-items: center;
+    }
 }
