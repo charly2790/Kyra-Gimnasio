@@ -573,6 +573,19 @@ form {
     text-shadow: gray -2px 1px;
 }
 
+.error{
+    box-shadow: 5px 5px 30px red; 
+    border: 1px solid red;
+}
+.correct{            
+    box-shadow: 5px 5px 30px greenyellow; 
+    border: 1px solid greenyellow;
+}
+.default{            
+    box-shadow: 0px 0px 0px rgba(255, 203, 58, 1) ;
+    border: 1px 1px solid rgba(255, 203, 58, 1);
+}
+
 /*--------------------------------------------------------------------------------*/
 /* Página: Nosotros.html                                                          */
 /*--------------------------------------------------------------------------------*/
