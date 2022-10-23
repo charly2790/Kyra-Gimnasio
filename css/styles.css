@@ -20,6 +20,7 @@
     --color-violeta: rgba(81, 29, 71, 1);
     --color-violeta-80: rgba(81, 29, 71, 0.8);
     --color-negro: rgba(30, 36, 37, 1);
+    --color-negro-80: rgba(30, 36, 37, 0.8);
     --color-crema: rgba(255, 255, 226, 1);
 }
 
@@ -40,7 +41,9 @@
 .header {
     background-color: var(--color-rosa);
     background: linear-gradient(180deg, var(--color-rosa) 0%, var(--color-rosa-80) 65%, var(--color-amarillo) 100%);
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 40;
 }
 
 .header-ul {
@@ -67,7 +70,6 @@
 
 .hearder-menu a {
     text-decoration: none;
-
 }
 
 .hearder-menu:hover {
@@ -116,10 +118,11 @@
 }
 
 #top-section-carrousel {
-    width: 90vw;
+    width: 96vw;
     height: 38vh;
     margin: 1vh auto;
     z-index: 10;
+    overflow: hidden;
 }
 
 .cube-full {
@@ -133,25 +136,25 @@
 }
 
 .carrousel-side-size {
-    width: 90vw;
+    width: 96vw;
     height: 38vh;
     overflow: hidden;
 }
 
 .carrousel-side1 {
-    transform: translateZ(45vw);
+    transform: translateZ(48vw);
 }
 
 .carrousel-side2 {
-    transform: rotateY(180deg) translateZ(45vw);
+    transform: rotateY(180deg) translateZ(48vw);
 }
 
 .carrousel-side3 {
-    transform: rotateY(90deg) translateZ(45vw);
+    transform: rotateY(90deg) translateZ(48vw);
 }
 
 .carrousel-side4 {
-    transform: rotateY(-90deg) translateZ(45vw);
+    transform: rotateY(-90deg) translateZ(48vw);
 }
 
 #top-section-carrousel img {
@@ -176,20 +179,6 @@
 .left-side {
     background-color: var(--color-violeta);
     font-family: 'Josefin Sans';
-}
-
-.aside-parent {
-    width: 100%;
-    height: 100%;
-    /* border: 2px dashed white; */
-}
-
-.aside-map {
-    width: 98%;
-    height: 98%;
-    margin-right: 0%;
-    /* margin-left: 5%; */
-    margin-top: 2%;
 }
 
 .footer {
@@ -236,8 +225,8 @@
 }
 
 #footer-social-nw-container {
-    width: 55%;    
-    justify-content: space-between;    
+    width: 55%;
+    justify-content: space-between;
 }
 
 .footer-ul {
@@ -248,7 +237,7 @@
     padding: 0px;
 }
 
-#footer-ul-info{
+#footer-ul-info {
     margin-top: 5%;
 }
 
@@ -301,7 +290,7 @@
 
 .actividades-top-section {
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-image: linear-gradient(rgba(81, 29, 71, 0.6),
             rgba(81, 29, 71, 0.6)),
@@ -342,7 +331,7 @@
     animation-duration: 2s;
 }
 
-.activities-parent {
+title .activities-parent {
     column-gap: 1vw;
     /* width: 100vw; */
 }
@@ -592,13 +581,13 @@ form {
     background-image: linear-gradient(rgba(81, 29, 71, 0.3),
             rgba(81, 29, 71, 0.6)),
         url('../imgs/kyras-team-672.jpg');
-    width:70%;
-    height:45vh;
+    width: 70%;
+    height: 45vh;
     background-position: 30% 62%;
     /* min-width: 672px !important; */
 }
 
-.about-us-text-container{
+.about-us-text-container {
     width: 30%;
 }
 
@@ -636,15 +625,15 @@ form {
     animation-duration: 2s;
 }
 
-.main-content .section-schedule{
+.main-content .section-schedule {
     text-align: center;
 }
 
-.section-schedule h2{
+.section-schedule h2 {
     color: var(--color-amarillo-80);
 }
 
-.section-schedule p{
+.section-schedule p {
     font-weight: bolder;
 }
 
@@ -686,16 +675,160 @@ form {
     width: 120px;
 }
 
-.table-schedule hr{
+.table-schedule hr {
     width: 50%;
     margin-left: 25%;
 }
 
-.table-schedule td:hover{
+.table-schedule td:hover {
     transform: scale(1.2);
     background-color: var(--color-violeta-80);
     border-radius: 20%;
     color: var(--color-rosa);
+}
+
+/*--------------------------------------------------------------------------------*/
+/* Página: Index.html                                                          */
+/*--------------------------------------------------------------------------------*/
+
+.main-content-index {
+    padding: 2%;
+}
+
+.aside-parent {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+}
+
+.aside-map {
+    height: 100%;
+    width: 18.5vw;
+    margin-top: 2%;
+}
+
+.index-section-promociones {
+    width: 100%;
+    --height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    text-align: center;
+    float: left;
+    --width: 23vw;
+    margin-top: 30px;
+    row-gap: 40px;
+}
+
+.index-promocion {
+    animation: bounceInUp;
+    animation-duration: 3s;
+    rotate: -10deg;
+    color: var(--color-amarillo);
+    font-size: 1.5em;
+    font-weight: bolder;
+
+}
+
+.index-promocion p:nth-child(4) {
+    font-size: 2em;
+    animation: pulsoPromocion 3s infinite ease-in-out;
+}
+
+.index-promocion-motivacion h1 {
+    position: absolute;
+    bottom: 5%;
+    text-align: center;
+    z-index: 10;
+    color: var(--color-amarillo);
+    font-size: 3em;
+    font-family: 'Kaushan Script', cursive;
+    width: 100%;
+}
+
+.index-promocion-motivacion {
+    animation: bounceInRight;
+    animation-duration: 5s;
+    height: auto;
+    position: relative;
+    text-align: center;
+}
+
+#index-title {
+    color: var(--color-crema);
+    text-shadow: 2px 2px var(--color-negro);
+    text-align: center;
+    font-size: 3em;
+    font-style: italic;
+    filter: drop-shadow(0px 5px 30px var(--color-amarillo));
+}
+
+#index-somos-familia {
+    font-size: 1.3em;
+}
+
+#index-somos-familia h2 {
+    color: var(--color-amarillo-80);
+}
+
+.index-clima-contenedor{
+    position: fixed;
+    bottom: 10px;
+    right: 5%;
+    background-color: var(--color-negro-80);
+    border-radius: 50px;
+    padding-right: 1%;
+}
+
+.index-clima {
+    display: inline-flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8em;
+    font-family: 'Josefin Sans';
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+
+.index-clima img {
+    height: 100px;
+    width: 100px;
+}
+
+.index-clima div:nth-child(2) {
+    font-size: 3em;
+    font-weight: 600;
+    color: var(--color-amarillo);
+}
+
+.index-clima div:nth-child(3)>p:first-child {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.index-recetas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    border: 2px dashed var(--color-rosa-80);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.index-recetas img {
+    border-radius: 50px;
+    width: 300px;
+    height: 300px;
+}
+
+.index-recetas a {
+    text-decoration: none;
+    color: white;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -739,31 +872,51 @@ form {
     }
 }
 
+@keyframes pulsoPromocion {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(1.2);
+        color: var(--color-crema);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
 /*--------------------------------------------------------------------------------*/
 /*                            Sección Configuración Grids                          */
 /*--------------------------------------------------------------------------------*/
 
 .grid-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: auto;
     display: grid;
     grid-template: auto 40vh 50% auto / 20% 60% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content right-side""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
 }
 
 #grid-actividad-individual {
     grid-template: auto 15vh auto auto / 30% 50% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""left-side main-content main-content""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content main-content" "footer footer footer";
 }
 
 #grid-actividades {
     grid-template: auto 50vh auto auto / 20% 60% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
 }
 
 #grid-contacto {
     grid-template: auto 50vh auto auto / 20% 60% 20%;
-    grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+    grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
+}
+
+#grid-index {
+    grid-template: auto 40vh auto auto / 23vw 1fr 20%;
+    grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content right-side" "footer footer footer";
 }
 
 .grid-form {
@@ -808,12 +961,17 @@ form {
 
     .grid-container {
         grid-template: auto auto auto 50% auto / 20% 60% 20%;
-        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""main-content main-content right-side""footer footer footer";
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "main-content main-content right-side" "footer footer footer";
     }
 
     #grid-actividad-individual {
         grid-template: auto auto 10vh auto 50vh auto / auto 50% auto;
-        grid-template-areas: "header header header""nav-container nav-container nav-container""top-section top-section top-section""left-side main-content main-content""right-side main-content main-content""footer footer footer";
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "left-side main-content main-content" "right-side main-content main-content" "footer footer footer";
+    }
+
+    #grid-index {
+        grid-template: auto auto auto auto auto auto auto / 360px auto auto;
+        grid-template-areas: "header header header" "nav-container nav-container nav-container" "top-section top-section top-section" "left-side main-content main-content" "right-side right-side right-side" "footer footer footer";
     }
 
     .hearder-menu:hover {
@@ -833,13 +991,13 @@ form {
     }
 
     #top-section-carrousel {
-        width: 90vw;
+        width: 96vw;
         height: 28vh;
         margin: 1vh auto;
     }
 
     .carrousel-side-size {
-        width: 90vw;
+        width: 96vw;
         height: 28vh;
         overflow: hidden;
     }
@@ -901,25 +1059,27 @@ form {
     .about-us-picture-container {
         background-image: linear-gradient(rgba(81, 29, 71, 0.3),
                 rgba(81, 29, 71, 0.6)),
-            url('../imgs/kyras-team-470.jpg');        
-        height:266px;
-        margin-bottom: 2vh !important;        
+            url('../imgs/kyras-team-470.jpg');
+        height: 266px;
+        margin-bottom: 2vh !important;
     }
-    .about-us-text-container {        
+
+    .about-us-text-container {
         font-size: 0.8em;
-        height:266px;
-        margin-bottom: 2vh !important;      
+        height: 266px;
+        margin-bottom: 2vh !important;
     }
 
-    #schedule-top-section-img{
+    #schedule-top-section-img {
         background-image: linear-gradient(rgba(81, 29, 71, 0.6),
-            rgba(81, 29, 71, 0.6)),
-        url('../imgs/schedule-top-section-1400.jpg');
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/schedule-top-section-1400.jpg');
     }
 
-    .section-schedule{
+    .section-schedule {
         transform: scale(0.9);
     }
+
     #footer-social-nw-container {
         width: 80%;
         /* justify-content: space-between;    */
@@ -931,12 +1091,17 @@ form {
 
     .grid-container {
         grid-template: auto auto 20vh 1fr 15% 20% / 100%;
-        grid-template-areas: "header""nav-container""top-section""main-content""right-side""footer";
+        grid-template-areas: "header" "nav-container" "top-section" "main-content" "right-side" "footer";
     }
 
     #grid-actividad-individual {
         grid-template: auto auto 10vh 1fr 60vh 20% / 100%;
-        grid-template-areas: "header""nav-container""top-section""main-content""left-side""footer";
+        grid-template-areas: "header" "nav-container" "top-section" "main-content" "left-side" "footer";
+    }
+
+    #grid-index {
+        grid-template: auto auto 20vh auto auto 20vh 20% / 100%;
+        grid-template-areas: "header" "nav-container" "top-section" "main-content" "left-side" "right-side" "footer";
     }
 
     .hearder-menu-option {
@@ -949,13 +1114,13 @@ form {
 
 
     #top-section-carrousel {
-        width: 90vw;
+        width: 96vw;
         height: 18vh;
         margin: 1vh auto;
     }
 
     .carrousel-side-size {
-        width: 90vw;
+        width: 96vw;
         height: 18vh;
         overflow: hidden;
     }
@@ -1030,30 +1195,43 @@ form {
     .about-us-picture-container {
         background-image: linear-gradient(rgba(81, 29, 71, 0.3),
                 rgba(81, 29, 71, 0.6)),
-            url('../imgs/kyras-team-400.jpg');        
+            url('../imgs/kyras-team-400.jpg');
         min-width: 470px;
         background-repeat: no-repeat;
     }
 
-    #schedule-top-section-img{
+    #schedule-top-section-img {
         background-image: linear-gradient(rgba(81, 29, 71, 0.6),
-            rgba(81, 29, 71, 0.6)),
-        url('../imgs/schedule-top-section-800.jpg');
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/schedule-top-section-800.jpg');
     }
 
-    .section-schedule{
+    .section-schedule {
         margin-top: -10%;
         transform: scale(0.8);
     }
-    #footer-ul-info li{    
+
+    #footer-ul-info li {
         text-align: center;
     }
 
     #footer-social-nw-container {
         width: 100%;
-        justify-content: space-around;  
+        justify-content: space-around;
     }
 
+    .aside-parent {
+        text-align: center;
+    }
+
+    .aside-map {
+        width: 96vw;
+    }
+
+    .index-section-promociones {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 @media only screen and (max-width: 490px) {
@@ -1082,9 +1260,9 @@ form {
         align-items: center;
     }
 
-    #footer-social-nw-container {        
+    #footer-social-nw-container {
         width: 50%;
-        justify-content: space-between;        
+        justify-content: space-between;
         column-gap: 1vw;
     }
 
@@ -1149,12 +1327,12 @@ form {
 
     #grid-actividades {
         grid-template: auto 30vh auto auto / 20% 60% 20%;
-        grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+        grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
     }
 
     #grid-contacto {
         grid-template: auto 30vh auto auto / 20% 60% 20%;
-        grid-template-areas: "header header header""top-section top-section top-section""main-content main-content main-content""footer footer footer";
+        grid-template-areas: "header header header" "top-section top-section top-section" "main-content main-content main-content" "footer footer footer";
     }
 
     .actividades-top-section {
@@ -1178,20 +1356,24 @@ form {
 
     }
 
-    #footer-main-child{
+    #footer-main-child {
         align-items: center;
     }
-    
-    #schedule-top-section-img{
+
+    #schedule-top-section-img {
         background-image: linear-gradient(rgba(81, 29, 71, 0.6),
-            rgba(81, 29, 71, 0.6)),
-        url('../imgs/schedule-top-section-490.jpg');
+                rgba(81, 29, 71, 0.6)),
+            url('../imgs/schedule-top-section-490.jpg');
     }
 
-    .section-schedule{
+    .section-schedule {
         margin-top: -30%;
         margin-left: -15%;
         transform: scale(0.6);
     }
 
+    .index-section-promociones {
+        display: flex;
+        flex-direction: column;
+    }
 }
