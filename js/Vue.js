@@ -75,10 +75,12 @@ const recetasApp = Vue.createApp({
                 for(resp of response.data.hits)
                 {
                     this.Recetas_HTML +=
-                    `<div>
-                        <p><a href="${resp.recipe.shareAs}">${resp.recipe.label}</a></p>
+                    `<div><a href="${resp.recipe.shareAs}" target="_blank">
+                        <div class="index-recetas-tarjeta">
+                            <p>${resp.recipe.label}</p>
+                        </div>
                         <img src="${resp.recipe.image}" alt="Foto de receta de ${resp.recipe.label}">
-                     </div>
+                        </a></div>
                     `
                 }
             }
