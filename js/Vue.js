@@ -96,3 +96,84 @@ const recetasApp = Vue.createApp({
         this.getRecetas()
     }
 }).mount("#appRecetas")
+
+const formValidation = Vue.createApp({
+
+    data() {
+        return {
+            nombre: "",
+            apellido: "",
+            email:"",
+            tel:"",
+            consulta:"",
+            estadoApellido:"default",
+            estadoNombre:"default",
+            estadoEmail:"default",
+            estadoTel:"default",
+            estadoConsulta:"default",              
+        }
+    },
+    watch:{
+        apellido(valor){                    
+            if (this.apellido.length == 0){
+                this.estadoApellido = "default"
+            } else if (this.apellido.length > 3){
+                this.estadoApellido = "correct"
+            } else{
+                this.estadoApellido = "error"
+            }
+        },
+        nombre(valor){
+            if (this.nombre.length == 0){
+                this.estadoNombre = "default"
+            } else if (this.nombre.length > 3){
+                this.estadoNombre = "correct"
+            } else{
+                this.estadoNombre = "error"
+            }
+        },
+        email(valor){
+            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            var rdo = re.test(this.email)
+            if (this.email.length == 0){
+                this.estadoEmail = "default"
+            } else if (rdo){
+                this.estadoEmail = "correct"
+            } else{
+                this.estadoEmail = "error"
+            }
+        },
+        tel(valor){
+            var re = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
+            var rdo = re.test(this.tel)
+            if (this.tel.length == 0){
+                this.estadoTel = "default"
+            } else if (rdo){
+                this.estadoTel = "correct"
+            } else{
+                this.estadoTel = "error"
+            }
+        },
+        consulta(valor){
+            if (this.consulta.length == 0){
+                this.estadoConsulta = "default"
+            } else if (this.consulta.length > 11){
+                this.estadoConsulta = "correct"
+            } else{
+                this.estadoConsulta = "error"
+            }
+        }
+    },                   
+    computed: {                   
+        validarCampos: function(){
+            val = true;
+            
+            if (this.estadoApellido == "correct" && this.estadoNombre == "correct" && this.estadoTel == "correct" && this.estadoEmail == "correct" && this.estadoConsulta == "correct"){
+                val = false;
+            }
+
+            return val;
+        }
+    },
+
+}).mount("#formValidations")
