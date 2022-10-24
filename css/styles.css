@@ -530,8 +530,12 @@
     width: 99%;
 }
 
-/* .contacto-container>div, */
-form {
+.contacto-container{
+    width:100%;
+    column-gap: 10px;
+}
+
+.contacto-container>div,form {
     width: 35%;    
     min-width: 300px;
 }
