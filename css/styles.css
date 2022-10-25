@@ -545,8 +545,7 @@
     margin: 0px;
     padding: 0px;
     position: relative;
-    top: 30%;
-    left: 10%;
+    top: 30%;    
 }
 
 .contacto-ul li {
@@ -1081,6 +1080,10 @@
 
     #footer-social-nw-container {
         width: 80%;        
+    }
+
+    #actividades-nuestras-act{
+        font-size: 1.5em;
     }
 
 }
