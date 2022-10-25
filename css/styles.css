@@ -818,6 +818,17 @@
     padding: 10px;
 }
 
+.index-recetas-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+}
+
+.index-recetas div{
+    width: 300px;
+}
+
 .index-recetas img {
     border-radius: 50px;
     width: 300px;
@@ -826,7 +837,17 @@
 
 .index-recetas a {
     text-decoration: none;
+}
+
+.index-recetas-tarjeta p {
     color: white;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.index-recetas div:hover p {
+    color: var(--color-amarillo-80);
+    transform: scale(1.2);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -913,7 +934,7 @@
 }
 
 #grid-index {
-    grid-template: auto 40vh auto auto / 23vw 1fr 20%;
+    grid-template: auto 40vh auto auto / 23vw 1fr 20.5vw;
     grid-template-areas: "header header header" "top-section top-section top-section" "left-side main-content right-side" "footer footer footer";
 }
 
@@ -1086,6 +1107,13 @@
         font-size: 1.5em;
     }
 
+    .aside-parent {
+        text-align: center;
+    }
+
+    .aside-map {
+        width: 96vw;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1233,6 +1261,10 @@
         display: flex;
         flex-direction: row;
     }
+
+    .index-clima div:nth-child(3) {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 490px) {
@@ -1376,5 +1408,14 @@
     .index-section-promociones {
         display: flex;
         flex-direction: column;
+    }
+
+    .index-clima img {
+        height: 60px;
+        width: 60px;
+    }
+    
+    .index-clima div:nth-child(2) {
+        font-size: 2em;
     }
 }
