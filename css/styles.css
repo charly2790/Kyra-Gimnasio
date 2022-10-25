@@ -1095,10 +1095,6 @@
             url('../imgs/schedule-top-section-1400.jpg');
     }
 
-    .section-schedule {
-        transform: scale(0.9);
-    }
-
     #footer-social-nw-container {
         width: 80%;        
     }
@@ -1235,9 +1231,8 @@
             url('../imgs/schedule-top-section-800.jpg');
     }
 
-    .section-schedule {
-        margin-top: -10%;
-        transform: scale(0.8);
+    .table-schedule {
+        font-size: 1.1em;
     }
 
     #footer-ul-info li {
@@ -1399,10 +1394,8 @@
             url('../imgs/schedule-top-section-490.jpg');
     }
 
-    .section-schedule {
-        margin-top: -30%;
-        margin-left: -15%;
-        transform: scale(0.6);
+    .table-schedule {
+        font-size: 1em;
     }
 
     .index-section-promociones {
