@@ -12,6 +12,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
     <link rel="icon" href="imgs/Logo-Cat-To-Right.png">
     <title>Kyra's Gym</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVHQNX7BDS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MVHQNX7BDS');
+    </script>
+
 </head>
 
 <body>
@@ -112,21 +123,21 @@
                     <div>En <b>Kyra's Gym</b> contamos con el mejor equipo de entrenadores que están disponibles para
                         guiarte y apoyarte.
                         Obtené consejos profesionales sobre el plan de formación, la intensidad y la salud en función de
-                        tus habilidades y preferencias. 
+                        tus habilidades y preferencias.
                     </div><br><br>
                     <h2>Piensa sano</h2>
                     <div>
                         Junto al ejercicio es necesario una buena alimentación... <br>
                         Estas son las recetas de la semana!!!
                     </div>
-                    </section>
+                </section>
 
                 <br><br>
-            <div id="appRecetas">
-                <div v-html="Recetas_HTML" class="index-recetas"></div>
-            </div>    
+                <div id="appRecetas">
+                    <div v-html="Recetas_HTML" class="index-recetas"></div>
+                </div>
             </div>
-            
+
         </main>
         <footer class="footer grid-footer">
             <div class="footer-parent footer-flex-row">
@@ -139,28 +150,30 @@
                 <!-- Hijo Nro. 2 -->
                 <div class="footer-child footer-flex-column" id="footer-second-child">
                     <ul class=" footer-ul" id="footer-ul-info">
-                    <li>
-                        <h3>Kyra's Gym San Telmo</h3>
-                    </li>
-                    <li>Av. Paseo Colon 550</li>
-                    <li>+5491153131963</li>
-                    <li>kyra-gym@gmail.com</li>
-                    <li>Buenos Aires, Argentina</li>
-                    <!-- <i class="fa-solid fa-bars-filter"></i> -->
+                        <li>
+                            <h3>Kyra's Gym San Telmo</h3>
+                        </li>
+                        <li>Av. Paseo Colon 550</li>
+                        <li>+5491153131963</li>
+                        <li>kyra-gym@gmail.com</li>
+                        <li>Buenos Aires, Argentina</li>
+                        <!-- <i class="fa-solid fa-bars-filter"></i> -->
                     </ul>
                     <div id="footer-social-nw-container" class="footer-flex-row" style="margin-top: 3%;">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fa-brands fa-facebook fa-2xl"></i></a>
                         <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-2xl"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-instagram fa-2xl"></i></a>
                     </div>
                 </div>
-                
+
             </div>
         </footer>
         <div id="appClima" class="index-clima-contenedor">
             <div v-html="Clima_HTML" class="index-clima"></div>
         </div>
-    <script src="js/Vue.js"></script>
+        <script src="js/Vue.js"></script>
 </body>
 
 </html>

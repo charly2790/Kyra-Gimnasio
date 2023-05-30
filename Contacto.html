@@ -14,6 +14,16 @@
     <!-- CDN de VUE -->
     <script src="https://unpkg.com/vue@next"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MVHQNX7BDS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MVHQNX7BDS');
+    </script>
+
 </head>
 
 <body>
@@ -77,7 +87,7 @@
                             <li><i class="fa-solid fa-envelope"></i> kyra-gym@gmail.com</li>
                         </ul>
                     </div>
-                    <form action="" >
+                    <form action="">
                         <div class="contacto-form-grid-container" id="formValidations">
                             <div class="contacto-form-item"><input class="contacto-form-field" type="text" name="" id=""
                                     placeholder="Nombre" v-model="nombre" v-bind:class="estadoNombre"></div>
@@ -98,7 +108,7 @@
                                     placeholder="Dejanos tu consulta..." class="contacto-form-field" style="width: 99%;"
                                     v-model="consulta" v-bind:class="estadoConsulta"></textarea></div>
                             <div class="contacto-form-item-x2"><button type="submit" class="contacto-form-field"
-                                    style="width:100%" :disabled = "validarCampos">Enviar</button></div>                            
+                                    style="width:100%" :disabled="validarCampos">Enviar</button></div>
                         </div>
                     </form>
 
@@ -119,19 +129,21 @@
                 <!-- Hijo Nro. 2 -->
                 <div class="footer-child footer-flex-column" id="footer-second-child">
                     <ul class=" footer-ul" id="footer-ul-info">
-                    <li>
-                        <h3>Kyra's Gym San Telmo</h3>
-                    </li>
-                    <li>Av. Paseo Colon 550</li>
-                    <li>+5491153131963</li>
-                    <li>kyra-gym@gmail.com</li>
-                    <li>Buenos Aires, Argentina</li>
-                    <!-- <i class="fa-solid fa-bars-filter"></i> -->
+                        <li>
+                            <h3>Kyra's Gym San Telmo</h3>
+                        </li>
+                        <li>Av. Paseo Colon 550</li>
+                        <li>+5491153131963</li>
+                        <li>kyra-gym@gmail.com</li>
+                        <li>Buenos Aires, Argentina</li>
+                        <!-- <i class="fa-solid fa-bars-filter"></i> -->
                     </ul>
                     <div id="footer-social-nw-container" class="footer-flex-row" style="margin-top: 3%;">
-                        <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fa-brands fa-facebook fa-2xl"></i></a>
                         <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter fa-2xl"></i></a>
-                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-2xl"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i
+                                class="fa-brands fa-instagram fa-2xl"></i></a>
                     </div>
                 </div>
             </div>
